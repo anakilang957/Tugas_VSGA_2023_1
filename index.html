@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TUGAS VSGA 2023_1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="number"] {
+        width: 100px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 24px;
+        }
+
+        input[type="number"] {
+          width: 80px;
+        }
+
+        button {
+          padding: 8px 16px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 20px;
+        }
+
+        input[type="number"] {
+          width: 60px;
+        }
+
+        button {
+          padding: 6px 12px;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        h1 {
+          font-size: 18px;
+        }
+
+        input[type="number"] {
+          width: 50px;
+        }
+
+        button {
+          padding: 4px 10px;
+        }
+      }
+    </style>
+    <script>
+      function printInput() {
+        var inputElement = document.getElementById("inputNumber");
+        var input = inputElement.value;
+
+        var output = "  ";
+        for (var i = 0; i < input; i++) {
+          document.write("Input ke- " + i + "<br/> ");
+        }
+
+        var resultElement = document.getElementById("result");
+        resultElement.textContent = output;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>TUGAS VSGA 2023_1</h1>
+
+    <label for="inputNumber">Masukkan angka:</label>
+    <input type="number" id="inputNumber" />
+    <button onclick="printInput()">Cetak</button>
+
+    <div id="result"></div>
+  </body>
+</html>
